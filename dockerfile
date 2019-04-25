@@ -2,10 +2,14 @@ FROM ubuntu:16.04
 RUN apt-get update
 RUN apt-get install -y tomcat8
 EXPOSE 80
-RUN add-apt-get-repository ppa:webupd8team/java
+
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository -y ppa:webupd8team/java
+RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 RUN apt-get update
-RUN apt-get install -y oracle-java8-installer
-RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+RUN apt-get -y install oracle-java8-installer
+
 RUN apt-get install -y maven
 RUN mkdir mavenTest
 RUN cd mavenTest/
