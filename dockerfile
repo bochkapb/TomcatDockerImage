@@ -3,13 +3,13 @@ RUN apt-get update
 RUN apt-get install -y tomcat8
 EXPOSE 80
 
-RUN apt-get -y install software-properties-common
-RUN add-apt-repository -y ppa:webupd8team/java
-RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
-RUN apt-get update
-RUN apt-get -y install oracle-java8-installer
-RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+#RUN apt-get -y install software-properties-common
+#RUN add-apt-repository -y ppa:webupd8team/java
+#RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+#RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+#RUN apt-get update
+#RUN apt-get -y install oracle-java8-installer
+#RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
 RUN apt-get install -y maven
 RUN mkdir mavenTest
