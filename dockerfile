@@ -10,6 +10,7 @@ EXPOSE 80
 #RUN apt-get update
 #RUN apt-get -y install oracle-java8-installer
 #RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 RUN apt-get install -y maven
 RUN mkdir mavenTest
