@@ -9,6 +9,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 RUN apt-get update
 RUN apt-get -y install oracle-java8-installer
+RUN export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 
 RUN apt-get install -y maven
 RUN mkdir mavenTest
