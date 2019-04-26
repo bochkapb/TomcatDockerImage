@@ -1,12 +1,15 @@
 #FROM ubuntu:16.04
-FROM openjdk:11-jre-slim
+#FROM openjdk:11-jre-slim
+FROM openjdk:8-jre-alpine
+
 RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
 
 RUN apt-get install -y tomcat8
 EXPOSE 80
 
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+#ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 
 
 RUN apt-get install -y maven
