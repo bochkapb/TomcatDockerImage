@@ -7,7 +7,7 @@ FROM openjdk:11-jre-slim
 RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
 RUN ls /usr/lib/jvm/java-11-openjdk-amd64/bin
-RUN peter
+#RUN peter
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 #ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
