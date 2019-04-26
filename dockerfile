@@ -3,17 +3,14 @@ FROM openjdk:11-jre-slim
 #FROM openjdk:8-jre-alpine
 RUN ls /usr/lib/jvm
 
-RUN peter
+#RUN peter
 
 RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 RUN apt-get install -y tomcat8
 EXPOSE 80
-
-#ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
-
 
 RUN apt-get install -y maven
 RUN apt-get install -y git
