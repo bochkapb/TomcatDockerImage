@@ -4,7 +4,8 @@ RUN apt-get update
 RUN apt-get install -y tomcat8
 EXPOSE 80
 
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+#ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+ENV JAVA_HOME=/docker-java-home
 
 RUN apt-get install -y maven
 RUN apt-get install -y git
