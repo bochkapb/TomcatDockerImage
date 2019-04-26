@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install -y tomcat8
 EXPOSE 80
 
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 
 RUN apt-get install -y maven
