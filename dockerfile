@@ -1,6 +1,9 @@
 #FROM ubuntu:16.04
 FROM openjdk:11-jre-slim
 #FROM openjdk:8-jre-alpine
+RUN ll /usr/lib/jvm
+
+RUN peter
 
 RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
