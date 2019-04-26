@@ -6,11 +6,13 @@ FROM openjdk:11-jre-slim
 
 RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/jre
+RUN ls /usr/lib/jvm/lib/jvm/java-11-openjdk-amd64
+RUN peter
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 #ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 RUN apt-get install -y tomcat8
-RUN ls /usr/lib/jvm
+
 EXPOSE 80
 
 RUN apt-get install -y maven
