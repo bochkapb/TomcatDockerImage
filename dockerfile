@@ -2,11 +2,11 @@
 #FROM openjdk:11-jre-slim
 #FROM openjdk:8-jre-alpine
 
-FROM tomcat:8.0
+FROM tomcat:8
 
 #RUN peter
 
-#RUN apt-get update
+RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
 #RUN ls /usr/lib/jvm/java-11-openjdk-amd64/bin
 #RUN peter
