@@ -27,6 +27,6 @@ WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package
 #RUN cp target/hello-1.0.war /var/lib/tomcat8/webapps/
 RUN cp target/hello-1.0.war /usr/local/tomcat/webapps/
-RUN service tomcat8 restart
+RUN service tomcat restart
 
-CMD ["catalina.sh", "run"]
+#CMD ["catalina.sh", "run"]
