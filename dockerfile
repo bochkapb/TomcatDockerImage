@@ -6,7 +6,7 @@ FROM tomcat:8.0
 
 #RUN peter
 
-RUN apt-get update
+#RUN apt-get update
 #ENV JAVA_HOME=/docker-java-home
 #RUN ls /usr/lib/jvm/java-11-openjdk-amd64/bin
 #RUN peter
